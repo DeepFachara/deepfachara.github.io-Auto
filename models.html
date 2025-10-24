@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Models - AutoElite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a2b3c;
+            --secondary: #e63946;
+            --accent: #457b9d;
+            --gradient: linear-gradient(135deg, #1a2b3c 0%, #2a4b6c 100%);
+        }
+        
+        .navbar {
+            background: var(--gradient);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            margin: 0 8px;
+            transition: all 0.3s;
+            border-radius: 5px;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary {
+            background: var(--secondary);
+            border: none;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background: #c1121f;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(230,57,70,0.3);
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            margin: 15px auto;
+        }
+        
+        .car-model-card {
+            transition: transform 0.3s;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .car-model-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .car-specs {
+            background: #f8f9fa;
+            border-radius: 5px;
+            padding: 15px;
+        }
+        
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .spec-item:last-child {
+            border-bottom: none;
+        }
+        
+        .category-section {
+            margin-bottom: 60px;
+        }
+        
+        .category-header {
+            background: var(--gradient);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        footer {
+            background: var(--gradient);
+            color: white;
+        }
+        
+        .social-icons a {
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-car me-2"></i>AutoElite
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="models.html">Car Models</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-3">
+                    <input class="form-control me-2" type="search" placeholder="Search cars...">
+                    <button class="btn btn-outline-light" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h1 class="text-center section-title">Our Car Models</h1>
+            <p class="text-center lead">Discover our extensive collection of premium vehicles across all categories</p>
+        </div>
+    </section>
+
+    <!-- SUVs Section -->
+    <section class="category-section">
+        <div class="container">
+            <div class="category-header">
+                <h2 class="text-center mb-0"><i class="fas fa-truck me-2"></i>SUV Collection</h2>
+            </div>
+            <div class="row">
+                <!-- SUV 1 -->
+                <div class="col-md-4">
+                    <div class="card car-model-card h-100">
+                        <img src="Page2-Range.avif" 
+                             class="card-img-top" alt="Premium SUV" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Range Rover Sport</h5>
+                            <p class="card-text flex-grow-1">Luxury SUV with exceptional off-road capabilities and premium comfort.</p>
+                            <div class="car-specs mt-3">
+                                <div class="spec-item">
+                                    <span>Engine:</span>
+                                    <span>3.0L V6 Turbo</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>HP:</span>
+                                    <span>355</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>0-60 mph:</span>
+                                    <span>5.9s</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Price:</span>
+                                    <span>$85,000</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUV 2 -->
+                <div class="col-md-4">
+                    <div class="card car-model-card h-100">
+                        <img src="BMW-X3.avif" 
+                             class="card-img-top" alt="Compact SUV" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">BMW X3</h5>
+                            <p class="card-text flex-grow-1">Compact luxury SUV with sporty performance and advanced technology.</p>
+                            <div class="car-specs mt-3">
+                                <div class="spec-item">
+                                    <span>Engine:</span>
+                                    <span>2.0L Turbo</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>HP:</span>
+                                    <span>248</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>0-60 mph:</span>
+                                    <span>6.0s</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Price:</span>
+                                    <span>$45,000</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUV 3 -->
+                <div class="col-md-4">
+                    <div class="card car-model-card h-100">
+                        <img src="Mercedes-gle.avif" 
+                             class="card-img-top" alt="Luxury SUV" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Mercedes GLE</h5>
+                            <p class="card-text flex-grow-1">Premium midsize SUV with elegant design and cutting-edge features.</p>
+                            <div class="car-specs mt-3">
+                                <div class="spec-item">
+                                    <span>Engine:</span>
+                                    <span>3.0L Inline-6</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>HP:</span>
+                                    <span>362</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>0-60 mph:</span>
+                                    <span>5.3s</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Price:</span>
+                                    <span>$65,000</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sports Cars Section -->
+    <section class="category-section">
+        <div class="container">
+            <div class="category-header">
+                <h2 class="text-center mb-0"><i class="fas fa-bolt me-2"></i>Sports Cars</h2>
+            </div>
+            <div class="row">
+                <!-- Sports 1 -->
+                <div class="col-md-4">
+                    <div class="card car-model-card h-100">
+                        <img src="Porsche911.avif" 
+                             class="card-img-top" alt="Sports Car" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Porsche 911 Turbo</h5>
+                            <p class="card-text flex-grow-1">Iconic sports car with breathtaking performance and precision handling.</p>
+                            <div class="car-specs mt-3">
+                                <div class="spec-item">
+                                    <span>Engine:</span>
+                                    <span>3.7L Twin-Turbo</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>HP:</span>
+                                    <span>572</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>0-60 mph:</span>
+                                    <span>2.6s</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Price:</span>
+                                    <span>$170,000</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sports 2 -->
+                <div class="col-md-4">
+                    <div class="card car-model-card h-100">
+                        <img src="Audi-R8.avif" 
+                             class="card-img-top" alt="Sports Convertible" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Audi R8 Spyder</h5>
+                            <p class="card-text flex-grow-1">Open-top supercar with V10 power and stunning design.</p>
+                            <div class="car-specs mt-3">
+                                <div class="spec-item">
+                                    <span>Engine:</span>
+                                    <span>5.2L V10</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>HP:</span>
+                                    <span>562</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>0-60 mph:</span>
+                                    <span>3.5s</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Price:</span>
+                                    <span>$190,000</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sports 3 -->
+                <div class="col-md-4">
+                    <div class="card car-model-card h-100">
+                        <img src="Chevrolet.avif" 
+                             class="card-img-top" alt="Sports Coupe" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Chevrolet Corvette</h5>
+                            <p class="card-text flex-grow-1">American sports car with mid-engine design and exceptional value.</p>
+                            <div class="car-specs mt-3">
+                                <div class="spec-item">
+                                    <span>Engine:</span>
+                                    <span>6.2L V8</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>HP:</span>
+                                    <span>490</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>0-60 mph:</span>
+                                    <span>2.9s</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Price:</span>
+                                    <span>$65,000</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sedans Section -->
+    <section class="category-section">
+        <div class="container">
+            <div class="category-header">
+                <h2 class="text-center mb-0"><i class="fas fa-car me-2"></i>Luxury Sedans</h2>
+            </div>
+            <div class="row">
+                <!-- Sedan 1 -->
+                <div class="col-md-4">
+                    <div class="card car-model-card h-100">
+                        <img src="Mercedes-S-class.avif" 
+                             class="card-img-top" alt="Luxury Sedan" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Mercedes S-Class</h5>
+                            <p class="card-text flex-grow-1">The pinnacle of luxury sedans with unparalleled comfort and technology.</p>
+                            <div class="car-specs mt-3">
+                                <div class="spec-item">
+                                    <span>Engine:</span>
+                                    <span>3.0L Inline-6</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>HP:</span>
+                                    <span>429</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>0-60 mph:</span>
+                                    <span>4.9s</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Price:</span>
+                                    <span>$115,000</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sedan 2 -->
+                <div class="col-md-4">
+                    <div class="card car-model-card h-100">
+                        <img src="BMW-7.avif" 
+                             class="card-img-top" alt="Executive Sedan" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">BMW 7 Series</h5>
+                            <p class="card-text flex-grow-1">Executive sedan with dynamic performance and innovative features.</p>
+                            <div class="car-specs mt-3">
+                                <div class="spec-item">
+                                    <span>Engine:</span>
+                                    <span>3.0L Turbo</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>HP:</span>
+                                    <span>335</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>0-60 mph:</span>
+                                    <span>5.3s</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Price:</span>
+                                    <span>$87,000</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sedan 3 -->
+                <div class="col-md-4">
+                    <div class="card car-model-card h-100">
+                        <img src="Audi-A8.avif" 
+                             class="card-img-top" alt="Luxury Sedan" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Audi A8</h5>
+                            <p class="card-text flex-grow-1">Flagship sedan with quattro all-wheel drive and premium luxury.</p>
+                            <div class="car-specs mt-3">
+                                <div class="spec-item">
+                                    <span>Engine:</span>
+                                    <span>3.0L V6</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>HP:</span>
+                                    <span>335</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>0-60 mph:</span>
+                                    <span>5.6s</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Price:</span>
+                                    <span>$86,000</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Electric Vehicles Section -->
+    <section class="category-section">
+        <div class="container">
+            <div class="category-header">
+                <h2 class="text-center mb-0"><i class="fas fa-bolt me-2"></i>Electric Vehicles</h2>
+            </div>
+            <div class="row">
+                <!-- Electric 1 -->
+                <div class="col-md-4">
+                    <div class="card car-model-card h-100">
+                        <img src="Tesla-S.avif" 
+                             class="card-img-top" alt="Electric Car" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Tesla Model S</h5>
+                            <p class="card-text flex-grow-1">All-electric luxury sedan with incredible performance and autopilot.</p>
+                            <div class="car-specs mt-3">
+                                <div class="spec-item">
+                                    <span>Range:</span>
+                                    <span>405 miles</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>HP:</span>
+                                    <span>670</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>0-60 mph:</span>
+                                    <span>3.1s</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Price:</span>
+                                    <span>$90,000</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Electric 2 -->
+                <div class="col-md-4">
+                    <div class="card car-model-card h-100">
+                        <img src="Audi-Etron.avif" 
+                             class="card-img-top" alt="Electric SUV" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Audi e-tron</h5>
+                            <p class="card-text flex-grow-1">Premium electric SUV with quattro all-wheel drive and luxury features.</p>
+                            <div class="car-specs mt-3">
+                                <div class="spec-item">
+                                    <span>Range:</span>
+                                    <span>222 miles</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>HP:</span>
+                                    <span>355</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>0-60 mph:</span>
+                                    <span>5.5s</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Price:</span>
+                                    <span>$66,000</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Electric 3 -->
+                <div class="col-md-4">
+                    <div class="card car-model-card h-100">
+                        <img src="Porsche-tycan.avif" 
+                             class="card-img-top" alt="Electric Sports" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Porsche Taycan</h5>
+                            <p class="card-text flex-grow-1">All-electric sports sedan with Porsche performance and luxury.</p>
+                            <div class="car-specs mt-3">
+                                <div class="spec-item">
+                                    <span>Range:</span>
+                                    <span>227 miles</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>HP:</span>
+                                    <span>469</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>0-60 mph:</span>
+                                    <span>5.1s</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Price:</span>
+                                    <span>$83,000</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h4><i class="fas fa-car me-2"></i>AutoElite</h4>
+                    <p>Your premier destination for luxury and performance vehicles.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled text-light">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Auto Street, City</li>
+                        <li><i class="fas fa-phone me-2"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@autoelite.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Newsletter</h5>
+                    <p>Subscribe for latest updates and offers.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center pt-4 border-top border-light">
+                <p>&copy; 2023 AutoElite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

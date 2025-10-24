@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AutoElite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a2b3c;
+            --secondary: #e63946;
+            --accent: #457b9d;
+            --gradient: linear-gradient(135deg, #1a2b3c 0%, #2a4b6c 100%);
+        }
+        
+        .navbar {
+            background: var(--gradient);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            margin: 0 8px;
+            transition: all 0.3s;
+            border-radius: 5px;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            margin: 15px auto;
+        }
+        
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .mission-box {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+        
+        footer {
+            background: var(--gradient);
+            color: white;
+        }
+        
+        .social-icons a {
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-car me-2"></i>AutoElite
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="models.html">Car Models</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-3">
+                    <input class="form-control me-2" type="search" placeholder="Search cars...">
+                    <button class="btn btn-outline-light" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h1 class="text-center section-title">About Us</h1>
+            <p class="text-center lead">Learn more about our journey and commitment to excellence</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>Our Story</h2>
+                    <p class="lead">A Leading Car Brand Since 2010</p>
+                    <p>Founded in 2010, AutoElite has been a leading provider of premium vehicles for over a decade. We started with a simple mission: to make luxury and performance vehicles accessible to everyone without compromising on quality or service.</p>
+                    <p>Our team of automotive experts carefully selects each vehicle in our inventory, ensuring they meet our strict standards for performance, reliability, and aesthetics.</p>
+                    
+                    <div class="mt-4">
+                        <h4>Our Values</h4>
+                        <ul>
+                            <li>Commitment to quality and customer satisfaction</li>
+                            <li>Transparency in all our dealings</li>
+                            <li>Innovation in automotive solutions</li>
+                            <li>Environmental responsibility</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1486496572940-2bb2341fdbdf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80" 
+                             alt="Our Showroom" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mission-box">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h3>Our Mission</h3>
+                        <p class="lead">To redefine the car buying experience by providing exceptional vehicles, transparent pricing, and outstanding customer service that builds lifelong relationships with our clients.</p>
+                        <p>We believe that everyone deserves to experience the joy of driving a quality vehicle, and we're committed to making that possible through flexible financing options, comprehensive warranties, and unparalleled after-sales support.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                    <h4>Expert Team</h4>
+                    <p>Our knowledgeable staff has over 50 years of combined automotive experience.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-award fa-3x text-primary mb-3"></i>
+                    <h4>Award Winning</h4>
+                    <p>Recognized as the best automotive dealer in the region for three consecutive years.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-handshake fa-3x text-primary mb-3"></i>
+                    <h4>Trusted Partner</h4>
+                    <p>Building lasting relationships with our customers through honesty and integrity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h4><i class="fas fa-car me-2"></i>AutoElite</h4>
+                    <p>Your premier destination for luxury and performance vehicles.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled text-light">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Auto Street, City</li>
+                        <li><i class="fas fa-phone me-2"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@autoelite.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Newsletter</h5>
+                    <p>Subscribe for latest updates and offers.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center pt-4 border-top border-light">
+                <p>&copy; 2023 AutoElite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
